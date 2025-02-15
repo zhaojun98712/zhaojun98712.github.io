@@ -74,29 +74,28 @@
 <div id="bg"></div>
 
 <audio id="chat-message-audio" controls>
-  <source controls="" id="chat-message-audio-source" src="http://lb.gm88.top/3456.mp3" type="audio/mpeg">
+  <source id="chat-message-audio-source" src="http://lb.gm88.top/3456.mp3" type="audio/mpeg">
+  您的浏览器不支持音频播放。
 </audio>
 
-<script type="application/javascript">
-  document.addEventListener("DOMContentLoaded", function() {
-    var audio = document.getElementById("chat-message-audio");
-    var audioSource = document.getElementById("chat-message-audio-source");
-
-    // 用户点击页面时触发播放
-    document.addEventListener("click", function() {
-      audio.play();
-    });
-
-    // 自动播放音频（如果浏览器支持）
-    function playAudio() {
-      if (typeof audio.play === "function") {
-        audio.play();
-      }
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const audio = document.getElementById("chat-message-audio");
+  
+  // 添加点击播放（用户手势触发后可解除静音限制）
+  document.addEventListener('click', async () => {
+    try {
+      await audio.play();
+    } catch (err) {
+      console.log('点击播放失败:', err);
     }
-
-    // 在页面加载后尝试自动播放音频
-    playAudio();
   });
+
+  // 尝试自动播放（带错误处理）
+  audio.play().catch(err => {
+    console.log('自动播放被阻止，需用户交互后播放。错误:', err);
+  });
+});
 </script>
 
 <script src="static/js/jquery.min.js"></script>
