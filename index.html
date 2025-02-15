@@ -1,46 +1,111 @@
-
-
-<!doctype html>
+﻿<!DOCTYPE HTML>
 <html>
-<head>
-    <meta charset="utf-8">
-    <title>白黑论坛导航-白黑</title>
-    <style>
-        .container {
-            width: 60%;
-            margin: 10% auto 0;
-            background-color: #f0f0f0;
-            padding: 2% 5%;
-            border-radius: 10px
-        }
+ <!--首页seo标题Pa-->
+<title>公益传奇基地</title>
+<!--首页seo描述-->
+<meta name="description" content="公益游戏">
+<!--首页seo关键词-->
+<meta name="keywords" content="导航页演示信息">
+<!--网站地址栏图标-->
+<link href="favicon.html" rel="shortcut icon" type="image/x-icon">
+<meta charset="utf-8">
+<meta name="renderer" content="webkit"/>
+<meta name="force-rendering" content="webkit"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+<link rel="stylesheet" href="static/css/main.css">
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* 隐藏滚动条 */
+  }
 
-        ul {
-            padding-left: 20px;
-        }
-
-            ul li {
-                line-height: 2.3
-            }
-
-        a {
-            color: #20a53a
-        }
-    </style>
-        <script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?bb15ca9bc8f45777e8470fa4df1e0b09";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
+  #video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* 将视频放在其他内容后面 */
+    object-fit: cover; /* 适应屏幕大小并保持纵横比 */
+  }
+</style>
 </head>
+<!--背景图片地址-->
 <body>
-    <div class="container">
-        <h1>白黑论坛公告</h1>
-<h3><a href="http://bbs.baihei.com.cn:996/">进入白黑论坛</a></h3>
+ <video id="video-background" autoplay loop muted>
+    <source src="static/images/456.MP4" type="video/mp4">
+    <!-- 添加其他视频格式的源作为备选 -->
+    Your browser does not support the video tag.
+  </video>
+<div id="wrapper">
+<header id="header">
 
-    </div>
+<div class="content">
+<div class="inner"><!--标题--><h1><a href="#">公益传奇基地</a></h1>
+                <p>
+                    <a href="#">⭐【本服承诺无任何充值项目，无待遇，无赞助，一切公平公正】⭐</a><br>
+                </p>
+				</div>
+				</div>
+				<nav>
+				<ul><!--菜单-->
+
+				 				<li><a href="https://www.baihei.com.cn/" target="_blank">  游戏交流</a></li>
+				 				<li><a href="https://wwrf.lanzout.com/i1odJ16v68ve" target="_blank">  游戏下载</a></li>
+				 				<li><a href="http://202.189.6.17:8888/" target="_blank">   QQ群交流</a></li>
+				 				<li><a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&amp;k=Z8Nr7Jg6waL6kUllnpP5Xxwjt-Oml4EY&amp;authKey=i9ECuoVIj3YRd9h%2BE3By1iTysO2JbB9e3mXve7PobvvWobdR5MMIZu8frBQP0ciV&amp;noverify=0&amp;group_code=92729990" target="_blank">  联系客服</a></li>
+
+				 				
+				</ul>
+				</nav>
+				</header>
+				<!-- Footer -->
+				<footer id="footer">
+				<div class="list-group-item reed">
+				<marquee scrollamount="8" direction="left" align="Middle" style="font-weight: bold;line-height: 20px;font-size: 20px;color: #FF0000;">⦿欢迎光临公益传奇基地⦿</marquee>
+				</div>
+			<p class="copyright">Copyright 2023 公益传奇基地 版权所有</p>
+
+
+</footer>
+</div>
+<div id="bg"></div>
+
+<audio id="chat-message-audio" controls>
+  <source controls="" id="chat-message-audio-source" src="static/music/堕落天使.mp3" type="audio/mpeg">
+</audio>
+
+<script type="application/javascript">
+  document.addEventListener("DOMContentLoaded", function() {
+    var audio = document.getElementById("chat-message-audio");
+    var audioSource = document.getElementById("chat-message-audio-source");
+
+    // 用户点击页面时触发播放
+    document.addEventListener("click", function() {
+      audio.play();
+    });
+
+    // 自动播放音频（如果浏览器支持）
+    function playAudio() {
+      if (typeof audio.play === "function") {
+        audio.play();
+      }
+    }
+
+    // 在页面加载后尝试自动播放音频
+    playAudio();
+  });
+</script>
+
+<script src="static/js/jquery.min.js"></script>
+<script src="static/js/skel.min.js"></script>
+<script src="static/js/util.js"></script>
+<script src="static/js/main.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+<script type="text/javascript" color="255,255,255" opacity="0.7" zindex="-2" count="200" src="static/js/canvas-nest.min.js"></script>
+<canvas id="c_n1" width="1365" height="888" style="position: fixed; top: 0; left: 0; z-index: -2; opacity: 0.7;"></canvas>
 </body>
+
 </html>
